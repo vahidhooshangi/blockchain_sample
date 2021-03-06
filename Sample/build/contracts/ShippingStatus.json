@@ -1,0 +1,2454 @@
+{
+  "contractName": "ShippingStatus",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "description",
+          "type": "string"
+        }
+      ],
+      "name": "LogNewAlert",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "Shipped",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "Delivered",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "Status",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.7.0+commit.9e61f92b\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"}],\"name\":\"LogNewAlert\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"Delivered\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"Shipped\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"Status\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/d/Code/Blockchain/Azure Train/contracts/ShippingStatus.sol\":\"ShippingStatus\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/d/Code/Blockchain/Azure Train/contracts/ShippingStatus.sol\":{\"keccak256\":\"0xa74bac4a74edb264b05b809c53d31e154e41d0921f1d476cce163c7943e07a5b\",\"urls\":[\"bzz-raw://ff0faad4de736a2807f9f61c3e8d8a87313307c51b70c84f6fa93ada52dd2879\",\"dweb:/ipfs/QmfQ9tewS5FuDbfiqCxd45VSnQhZuCANU8MDmVhzhzsHZE\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060008060006101000a81548160ff0219169083600281111561002f57fe5b021790555061036c806100436000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806345f09ce914610046578063779822f7146100c95780637e59301e146100d3575b600080fd5b61004e6100dd565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561008e578082015181840152602081019050610073565b50505050905090810190601f1680156100bb5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6100d1610101565b005b6100db61018e565b005b606060008060009054906101000a900460ff1690506100fb8161021b565b91505090565b60026000806101000a81548160ff0219169083600281111561011f57fe5b02179055507fca75c80642b93c980135b8355995abae3ab06033dc81f956b3824323b4903ef56040518080602001828103825260188152602001807f596f7572207061636b616765206861732061727269766564000000000000000081525060200191505060405180910390a1565b60016000806101000a81548160ff021916908360028111156101ac57fe5b02179055507fca75c80642b93c980135b8355995abae3ab06033dc81f956b3824323b4903ef560405180806020018281038252601d8152602001807f596f7572207061636b61676520686173206265656e207368697070656400000081525060200191505060405180910390a1565b606081600281111561022957fe5b6000600281111561023657fe5b1415610279576040518060400160405280600781526020017f50656e64696e67000000000000000000000000000000000000000000000000008152509050610331565b81600281111561028557fe5b6001600281111561029257fe5b14156102d5576040518060400160405280600781526020017f53686970706564000000000000000000000000000000000000000000000000008152509050610331565b8160028111156102e157fe5b6002808111156102ed57fe5b1415610330576040518060400160405280600981526020017f44656c69766572656400000000000000000000000000000000000000000000008152509050610331565b5b91905056fea2646970667358221220e3ee53586530b0c51f1d6fc607ee65cc06f35028e37e41d79e3d37f0ed3062c264736f6c63430007000033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c806345f09ce914610046578063779822f7146100c95780637e59301e146100d3575b600080fd5b61004e6100dd565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561008e578082015181840152602081019050610073565b50505050905090810190601f1680156100bb5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6100d1610101565b005b6100db61018e565b005b606060008060009054906101000a900460ff1690506100fb8161021b565b91505090565b60026000806101000a81548160ff0219169083600281111561011f57fe5b02179055507fca75c80642b93c980135b8355995abae3ab06033dc81f956b3824323b4903ef56040518080602001828103825260188152602001807f596f7572207061636b616765206861732061727269766564000000000000000081525060200191505060405180910390a1565b60016000806101000a81548160ff021916908360028111156101ac57fe5b02179055507fca75c80642b93c980135b8355995abae3ab06033dc81f956b3824323b4903ef560405180806020018281038252601d8152602001807f596f7572207061636b61676520686173206265656e207368697070656400000081525060200191505060405180910390a1565b606081600281111561022957fe5b6000600281111561023657fe5b1415610279576040518060400160405280600781526020017f50656e64696e67000000000000000000000000000000000000000000000000008152509050610331565b81600281111561028557fe5b6001600281111561029257fe5b14156102d5576040518060400160405280600781526020017f53686970706564000000000000000000000000000000000000000000000000008152509050610331565b8160028111156102e157fe5b6002808111156102ed57fe5b1415610330576040518060400160405280600981526020017f44656c69766572656400000000000000000000000000000000000000000000008152509050610331565b5b91905056fea2646970667358221220e3ee53586530b0c51f1d6fc607ee65cc06f35028e37e41d79e3d37f0ed3062c264736f6c63430007000033",
+  "immutableReferences": {},
+  "sourceMap": "37:1411:2:-:0;;;455:61;;;;;;;;;;490:18;481:6;;:27;;;;;;;;;;;;;;;;;;;;;;;;37:1411;;;;;;",
+  "deployedSourceMap": "37:1411:2:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1305:138;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;740:131;;;:::i;:::-;;560:132;;;:::i;:::-;;1305:138;1344:13;1371:18;1392:6;;;;;;;;;;;1371:27;;1417:18;1427:7;1417:9;:18::i;:::-;1410:25;;;1305:138;:::o;740:131::-;788:20;779:6;;:29;;;;;;;;;;;;;;;;;;;;;;;;824:39;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;740:131::o;560:132::-;606:18;597:6;;:27;;;;;;;;;;;;;;;;;;;;;;;;640:44;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;560:132::o;930:328::-;992:13;1103:7;1081:29;;;;;;;;:18;:29;;;;;;;;;1077:51;;;1112:16;;;;;;;;;;;;;;;;;;;;;1077:51;1162:7;1140:29;;;;;;;;:18;:29;;;;;;;;;1136:51;;;1171:16;;;;;;;;;;;;;;;;;;;;;1136:51;1223:7;1199:31;;;;;;;;:20;:31;;;;;;;;;1195:55;;;1232:18;;;;;;;;;;;;;;;;;;;;;1195:55;930:328;;;;:::o",
+  "source": "pragma solidity >=0.5.12 <=0.8.0;\r\n\r\ncontract ShippingStatus\r\n{\r\n    // Our predefined values for shipping listed as enums\r\n    enum ShipStatus { Pending, Shipped, Delivered }\r\n\r\n    // Save enum ShippingStatus in variable status\r\n    ShipStatus private status;\r\n\r\n    // Event to launch when package has arrived\r\n    event LogNewAlert(string description);\r\n\r\n    // This initializes our contract state (sets enum to Pending once the program starts)\r\n    constructor()  {\r\n        status = ShipStatus.Pending;\r\n    }\r\n    // Function to change to Shipped\r\n    function Shipped() public {\r\n        status = ShipStatus.Shipped;\r\n        emit LogNewAlert(\"Your package has been shipped\");\r\n    }\r\n\r\n    // Function to change to Delivered\r\n    function Delivered() public {\r\n        status = ShipStatus.Delivered;\r\n        emit LogNewAlert(\"Your package has arrived\");\r\n    }\r\n\r\n    // Function to get the status of the shipping\r\n    function getStatus(ShipStatus _status) internal pure returns (string memory) {\r\n     // Check the current status and return the correct name\r\n     if (ShipStatus.Pending == _status) return \"Pending\";\r\n     if (ShipStatus.Shipped == _status) return \"Shipped\";\r\n     if (ShipStatus.Delivered == _status) return \"Delivered\";\r\n    }\r\n\r\n   // Get status of your shipped item\r\n    function Status() public view returns (string memory) {\r\n         ShipStatus _status = status;\r\n         return getStatus(_status);\r\n    }\r\n\r\n}",
+  "sourcePath": "d:/Code/Blockchain/Azure Train/contracts/ShippingStatus.sol",
+  "ast": {
+    "absolutePath": "/d/Code/Blockchain/Azure Train/contracts/ShippingStatus.sol",
+    "exportedSymbols": {
+      "ShippingStatus": [
+        206
+      ]
+    },
+    "id": 207,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 117,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".12",
+          "<=",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:33:2"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 206,
+        "linearizedBaseContracts": [
+          206
+        ],
+        "name": "ShippingStatus",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "ShippingStatus.ShipStatus",
+            "id": 121,
+            "members": [
+              {
+                "id": 118,
+                "name": "Pending",
+                "nodeType": "EnumValue",
+                "src": "146:7:2"
+              },
+              {
+                "id": 119,
+                "name": "Shipped",
+                "nodeType": "EnumValue",
+                "src": "155:7:2"
+              },
+              {
+                "id": 120,
+                "name": "Delivered",
+                "nodeType": "EnumValue",
+                "src": "164:9:2"
+              }
+            ],
+            "name": "ShipStatus",
+            "nodeType": "EnumDefinition",
+            "src": "128:47:2"
+          },
+          {
+            "constant": false,
+            "id": 123,
+            "mutability": "mutable",
+            "name": "status",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 206,
+            "src": "235:25:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_enum$_ShipStatus_$121",
+              "typeString": "enum ShippingStatus.ShipStatus"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 122,
+              "name": "ShipStatus",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 121,
+              "src": "235:10:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_enum$_ShipStatus_$121",
+                "typeString": "enum ShippingStatus.ShipStatus"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 127,
+            "name": "LogNewAlert",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 126,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 125,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "description",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 127,
+                  "src": "336:18:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 124,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "336:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "335:20:2"
+            },
+            "src": "318:38:2"
+          },
+          {
+            "body": {
+              "id": 135,
+              "nodeType": "Block",
+              "src": "470:46:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 133,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 130,
+                      "name": "status",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 123,
+                      "src": "481:6:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_ShipStatus_$121",
+                        "typeString": "enum ShippingStatus.ShipStatus"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 131,
+                        "name": "ShipStatus",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 121,
+                        "src": "490:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_ShipStatus_$121_$",
+                          "typeString": "type(enum ShippingStatus.ShipStatus)"
+                        }
+                      },
+                      "id": 132,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "Pending",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "490:18:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_ShipStatus_$121",
+                        "typeString": "enum ShippingStatus.ShipStatus"
+                      }
+                    },
+                    "src": "481:27:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_ShipStatus_$121",
+                      "typeString": "enum ShippingStatus.ShipStatus"
+                    }
+                  },
+                  "id": 134,
+                  "nodeType": "ExpressionStatement",
+                  "src": "481:27:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 136,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 128,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "466:2:2"
+            },
+            "returnParameters": {
+              "id": 129,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "470:0:2"
+            },
+            "scope": 206,
+            "src": "455:61:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 148,
+              "nodeType": "Block",
+              "src": "586:106:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 142,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 139,
+                      "name": "status",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 123,
+                      "src": "597:6:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_ShipStatus_$121",
+                        "typeString": "enum ShippingStatus.ShipStatus"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 140,
+                        "name": "ShipStatus",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 121,
+                        "src": "606:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_ShipStatus_$121_$",
+                          "typeString": "type(enum ShippingStatus.ShipStatus)"
+                        }
+                      },
+                      "id": 141,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "Shipped",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "606:18:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_ShipStatus_$121",
+                        "typeString": "enum ShippingStatus.ShipStatus"
+                      }
+                    },
+                    "src": "597:27:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_ShipStatus_$121",
+                      "typeString": "enum ShippingStatus.ShipStatus"
+                    }
+                  },
+                  "id": 143,
+                  "nodeType": "ExpressionStatement",
+                  "src": "597:27:2"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "596f7572207061636b61676520686173206265656e2073686970706564",
+                        "id": 145,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "652:31:2",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_33c7478eb2513ad51987867cf9f77c992c58479946c4e80f91d025209bb05113",
+                          "typeString": "literal_string \"Your package has been shipped\""
+                        },
+                        "value": "Your package has been shipped"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_33c7478eb2513ad51987867cf9f77c992c58479946c4e80f91d025209bb05113",
+                          "typeString": "literal_string \"Your package has been shipped\""
+                        }
+                      ],
+                      "id": 144,
+                      "name": "LogNewAlert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 127,
+                      "src": "640:11:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory)"
+                      }
+                    },
+                    "id": 146,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "640:44:2",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 147,
+                  "nodeType": "EmitStatement",
+                  "src": "635:49:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "7e59301e",
+            "id": 149,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "Shipped",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 137,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "576:2:2"
+            },
+            "returnParameters": {
+              "id": 138,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "586:0:2"
+            },
+            "scope": 206,
+            "src": "560:132:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 161,
+              "nodeType": "Block",
+              "src": "768:103:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 155,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 152,
+                      "name": "status",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 123,
+                      "src": "779:6:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_ShipStatus_$121",
+                        "typeString": "enum ShippingStatus.ShipStatus"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 153,
+                        "name": "ShipStatus",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 121,
+                        "src": "788:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_ShipStatus_$121_$",
+                          "typeString": "type(enum ShippingStatus.ShipStatus)"
+                        }
+                      },
+                      "id": 154,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "Delivered",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "788:20:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_ShipStatus_$121",
+                        "typeString": "enum ShippingStatus.ShipStatus"
+                      }
+                    },
+                    "src": "779:29:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_ShipStatus_$121",
+                      "typeString": "enum ShippingStatus.ShipStatus"
+                    }
+                  },
+                  "id": 156,
+                  "nodeType": "ExpressionStatement",
+                  "src": "779:29:2"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "596f7572207061636b616765206861732061727269766564",
+                        "id": 158,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "836:26:2",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_477e4d2909691e539d246d1cd23f7f8fdc65a7dec9511d552dbc90206eafaefe",
+                          "typeString": "literal_string \"Your package has arrived\""
+                        },
+                        "value": "Your package has arrived"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_477e4d2909691e539d246d1cd23f7f8fdc65a7dec9511d552dbc90206eafaefe",
+                          "typeString": "literal_string \"Your package has arrived\""
+                        }
+                      ],
+                      "id": 157,
+                      "name": "LogNewAlert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 127,
+                      "src": "824:11:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory)"
+                      }
+                    },
+                    "id": 159,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "824:39:2",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 160,
+                  "nodeType": "EmitStatement",
+                  "src": "819:44:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "779822f7",
+            "id": 162,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "Delivered",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 150,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "758:2:2"
+            },
+            "returnParameters": {
+              "id": 151,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "768:0:2"
+            },
+            "scope": 206,
+            "src": "740:131:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 190,
+              "nodeType": "Block",
+              "src": "1007:251:2",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_enum$_ShipStatus_$121",
+                      "typeString": "enum ShippingStatus.ShipStatus"
+                    },
+                    "id": 172,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 169,
+                        "name": "ShipStatus",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 121,
+                        "src": "1081:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_ShipStatus_$121_$",
+                          "typeString": "type(enum ShippingStatus.ShipStatus)"
+                        }
+                      },
+                      "id": 170,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "Pending",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1081:18:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_ShipStatus_$121",
+                        "typeString": "enum ShippingStatus.ShipStatus"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 171,
+                      "name": "_status",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 164,
+                      "src": "1103:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_ShipStatus_$121",
+                        "typeString": "enum ShippingStatus.ShipStatus"
+                      }
+                    },
+                    "src": "1081:29:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 175,
+                  "nodeType": "IfStatement",
+                  "src": "1077:51:2",
+                  "trueBody": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "hexValue": "50656e64696e67",
+                      "id": 173,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1119:9:2",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_4be840e351422c3b302abb79aa7db05560ead7e387e413320822a342fca3f54e",
+                        "typeString": "literal_string \"Pending\""
+                      },
+                      "value": "Pending"
+                    },
+                    "functionReturnParameters": 168,
+                    "id": 174,
+                    "nodeType": "Return",
+                    "src": "1112:16:2"
+                  }
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_enum$_ShipStatus_$121",
+                      "typeString": "enum ShippingStatus.ShipStatus"
+                    },
+                    "id": 179,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 176,
+                        "name": "ShipStatus",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 121,
+                        "src": "1140:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_ShipStatus_$121_$",
+                          "typeString": "type(enum ShippingStatus.ShipStatus)"
+                        }
+                      },
+                      "id": 177,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "Shipped",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1140:18:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_ShipStatus_$121",
+                        "typeString": "enum ShippingStatus.ShipStatus"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 178,
+                      "name": "_status",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 164,
+                      "src": "1162:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_ShipStatus_$121",
+                        "typeString": "enum ShippingStatus.ShipStatus"
+                      }
+                    },
+                    "src": "1140:29:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 182,
+                  "nodeType": "IfStatement",
+                  "src": "1136:51:2",
+                  "trueBody": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "hexValue": "53686970706564",
+                      "id": 180,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1178:9:2",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_ea8c21351dfe8c1ee7c9c97b7a7f4f3470464497a9a7c2d3167590f4716cbe75",
+                        "typeString": "literal_string \"Shipped\""
+                      },
+                      "value": "Shipped"
+                    },
+                    "functionReturnParameters": 168,
+                    "id": 181,
+                    "nodeType": "Return",
+                    "src": "1171:16:2"
+                  }
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_enum$_ShipStatus_$121",
+                      "typeString": "enum ShippingStatus.ShipStatus"
+                    },
+                    "id": 186,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 183,
+                        "name": "ShipStatus",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 121,
+                        "src": "1199:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_ShipStatus_$121_$",
+                          "typeString": "type(enum ShippingStatus.ShipStatus)"
+                        }
+                      },
+                      "id": 184,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "Delivered",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1199:20:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_ShipStatus_$121",
+                        "typeString": "enum ShippingStatus.ShipStatus"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 185,
+                      "name": "_status",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 164,
+                      "src": "1223:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_ShipStatus_$121",
+                        "typeString": "enum ShippingStatus.ShipStatus"
+                      }
+                    },
+                    "src": "1199:31:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 189,
+                  "nodeType": "IfStatement",
+                  "src": "1195:55:2",
+                  "trueBody": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "hexValue": "44656c697665726564",
+                      "id": 187,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1239:11:2",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_84d438931365e92021ed104a3ccc6ebb11094926f21ebfcbd81ad9746006c510",
+                        "typeString": "literal_string \"Delivered\""
+                      },
+                      "value": "Delivered"
+                    },
+                    "functionReturnParameters": 168,
+                    "id": 188,
+                    "nodeType": "Return",
+                    "src": "1232:18:2"
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 191,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getStatus",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 165,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 164,
+                  "mutability": "mutable",
+                  "name": "_status",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 191,
+                  "src": "949:18:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_ShipStatus_$121",
+                    "typeString": "enum ShippingStatus.ShipStatus"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 163,
+                    "name": "ShipStatus",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 121,
+                    "src": "949:10:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_ShipStatus_$121",
+                      "typeString": "enum ShippingStatus.ShipStatus"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "948:20:2"
+            },
+            "returnParameters": {
+              "id": 168,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 167,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 191,
+                  "src": "992:13:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 166,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "992:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "991:15:2"
+            },
+            "scope": 206,
+            "src": "930:328:2",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 204,
+              "nodeType": "Block",
+              "src": "1359:84:2",
+              "statements": [
+                {
+                  "assignments": [
+                    197
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 197,
+                      "mutability": "mutable",
+                      "name": "_status",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 204,
+                      "src": "1371:18:2",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_ShipStatus_$121",
+                        "typeString": "enum ShippingStatus.ShipStatus"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 196,
+                        "name": "ShipStatus",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 121,
+                        "src": "1371:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_ShipStatus_$121",
+                          "typeString": "enum ShippingStatus.ShipStatus"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 199,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "id": 198,
+                    "name": "status",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 123,
+                    "src": "1392:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_ShipStatus_$121",
+                      "typeString": "enum ShippingStatus.ShipStatus"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1371:27:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 201,
+                        "name": "_status",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 197,
+                        "src": "1427:7:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_ShipStatus_$121",
+                          "typeString": "enum ShippingStatus.ShipStatus"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_enum$_ShipStatus_$121",
+                          "typeString": "enum ShippingStatus.ShipStatus"
+                        }
+                      ],
+                      "id": 200,
+                      "name": "getStatus",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 191,
+                      "src": "1417:9:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_enum$_ShipStatus_$121_$returns$_t_string_memory_ptr_$",
+                        "typeString": "function (enum ShippingStatus.ShipStatus) pure returns (string memory)"
+                      }
+                    },
+                    "id": 202,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1417:18:2",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory_ptr",
+                      "typeString": "string memory"
+                    }
+                  },
+                  "functionReturnParameters": 195,
+                  "id": 203,
+                  "nodeType": "Return",
+                  "src": "1410:25:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "45f09ce9",
+            "id": 205,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "Status",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 192,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1320:2:2"
+            },
+            "returnParameters": {
+              "id": 195,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 194,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 205,
+                  "src": "1344:13:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 193,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1344:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1343:15:2"
+            },
+            "scope": 206,
+            "src": "1305:138:2",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 207,
+        "src": "37:1411:2"
+      }
+    ],
+    "src": "0:1448:2"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/d/Code/Blockchain/Azure Train/contracts/ShippingStatus.sol",
+      "exportedSymbols": {
+        "ShippingStatus": [
+          206
+        ]
+      },
+      "license": null
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.5",
+            ".12",
+            "<=",
+            "0.8",
+            ".0"
+          ]
+        },
+        "id": 117,
+        "name": "PragmaDirective",
+        "src": "0:33:2"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            206
+          ],
+          "name": "ShippingStatus",
+          "scope": 207
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "ShippingStatus.ShipStatus",
+              "name": "ShipStatus"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "Pending"
+                },
+                "id": 118,
+                "name": "EnumValue",
+                "src": "146:7:2"
+              },
+              {
+                "attributes": {
+                  "name": "Shipped"
+                },
+                "id": 119,
+                "name": "EnumValue",
+                "src": "155:7:2"
+              },
+              {
+                "attributes": {
+                  "name": "Delivered"
+                },
+                "id": 120,
+                "name": "EnumValue",
+                "src": "164:9:2"
+              }
+            ],
+            "id": 121,
+            "name": "EnumDefinition",
+            "src": "128:47:2"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "mutability": "mutable",
+              "name": "status",
+              "overrides": null,
+              "scope": 206,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "enum ShippingStatus.ShipStatus",
+              "value": null,
+              "visibility": "private"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "ShipStatus",
+                  "referencedDeclaration": 121,
+                  "type": "enum ShippingStatus.ShipStatus"
+                },
+                "id": 122,
+                "name": "UserDefinedTypeName",
+                "src": "235:10:2"
+              }
+            ],
+            "id": 123,
+            "name": "VariableDeclaration",
+            "src": "235:25:2"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "LogNewAlert"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "mutability": "mutable",
+                      "name": "description",
+                      "overrides": null,
+                      "scope": 127,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 124,
+                        "name": "ElementaryTypeName",
+                        "src": "336:6:2"
+                      }
+                    ],
+                    "id": 125,
+                    "name": "VariableDeclaration",
+                    "src": "336:18:2"
+                  }
+                ],
+                "id": 126,
+                "name": "ParameterList",
+                "src": "335:20:2"
+              }
+            ],
+            "id": 127,
+            "name": "EventDefinition",
+            "src": "318:38:2"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "overrides": null,
+              "scope": 206,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 128,
+                "name": "ParameterList",
+                "src": "466:2:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 129,
+                "name": "ParameterList",
+                "src": "470:0:2"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "enum ShippingStatus.ShipStatus"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 123,
+                              "type": "enum ShippingStatus.ShipStatus",
+                              "value": "status"
+                            },
+                            "id": 130,
+                            "name": "Identifier",
+                            "src": "481:6:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "member_name": "Pending",
+                              "referencedDeclaration": null,
+                              "type": "enum ShippingStatus.ShipStatus"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 121,
+                                  "type": "type(enum ShippingStatus.ShipStatus)",
+                                  "value": "ShipStatus"
+                                },
+                                "id": 131,
+                                "name": "Identifier",
+                                "src": "490:10:2"
+                              }
+                            ],
+                            "id": 132,
+                            "name": "MemberAccess",
+                            "src": "490:18:2"
+                          }
+                        ],
+                        "id": 133,
+                        "name": "Assignment",
+                        "src": "481:27:2"
+                      }
+                    ],
+                    "id": 134,
+                    "name": "ExpressionStatement",
+                    "src": "481:27:2"
+                  }
+                ],
+                "id": 135,
+                "name": "Block",
+                "src": "470:46:2"
+              }
+            ],
+            "id": 136,
+            "name": "FunctionDefinition",
+            "src": "455:61:2"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "functionSelector": "7e59301e",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "Shipped",
+              "overrides": null,
+              "scope": 206,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 137,
+                "name": "ParameterList",
+                "src": "576:2:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 138,
+                "name": "ParameterList",
+                "src": "586:0:2"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "enum ShippingStatus.ShipStatus"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 123,
+                              "type": "enum ShippingStatus.ShipStatus",
+                              "value": "status"
+                            },
+                            "id": 139,
+                            "name": "Identifier",
+                            "src": "597:6:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "member_name": "Shipped",
+                              "referencedDeclaration": null,
+                              "type": "enum ShippingStatus.ShipStatus"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 121,
+                                  "type": "type(enum ShippingStatus.ShipStatus)",
+                                  "value": "ShipStatus"
+                                },
+                                "id": 140,
+                                "name": "Identifier",
+                                "src": "606:10:2"
+                              }
+                            ],
+                            "id": 141,
+                            "name": "MemberAccess",
+                            "src": "606:18:2"
+                          }
+                        ],
+                        "id": 142,
+                        "name": "Assignment",
+                        "src": "597:27:2"
+                      }
+                    ],
+                    "id": 143,
+                    "name": "ExpressionStatement",
+                    "src": "597:27:2"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_stringliteral_33c7478eb2513ad51987867cf9f77c992c58479946c4e80f91d025209bb05113",
+                                  "typeString": "literal_string \"Your package has been shipped\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 127,
+                              "type": "function (string memory)",
+                              "value": "LogNewAlert"
+                            },
+                            "id": 144,
+                            "name": "Identifier",
+                            "src": "640:11:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "596f7572207061636b61676520686173206265656e2073686970706564",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"Your package has been shipped\"",
+                              "value": "Your package has been shipped"
+                            },
+                            "id": 145,
+                            "name": "Literal",
+                            "src": "652:31:2"
+                          }
+                        ],
+                        "id": 146,
+                        "name": "FunctionCall",
+                        "src": "640:44:2"
+                      }
+                    ],
+                    "id": 147,
+                    "name": "EmitStatement",
+                    "src": "635:49:2"
+                  }
+                ],
+                "id": 148,
+                "name": "Block",
+                "src": "586:106:2"
+              }
+            ],
+            "id": 149,
+            "name": "FunctionDefinition",
+            "src": "560:132:2"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "functionSelector": "779822f7",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "Delivered",
+              "overrides": null,
+              "scope": 206,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 150,
+                "name": "ParameterList",
+                "src": "758:2:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 151,
+                "name": "ParameterList",
+                "src": "768:0:2"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "enum ShippingStatus.ShipStatus"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 123,
+                              "type": "enum ShippingStatus.ShipStatus",
+                              "value": "status"
+                            },
+                            "id": 152,
+                            "name": "Identifier",
+                            "src": "779:6:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "member_name": "Delivered",
+                              "referencedDeclaration": null,
+                              "type": "enum ShippingStatus.ShipStatus"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 121,
+                                  "type": "type(enum ShippingStatus.ShipStatus)",
+                                  "value": "ShipStatus"
+                                },
+                                "id": 153,
+                                "name": "Identifier",
+                                "src": "788:10:2"
+                              }
+                            ],
+                            "id": 154,
+                            "name": "MemberAccess",
+                            "src": "788:20:2"
+                          }
+                        ],
+                        "id": 155,
+                        "name": "Assignment",
+                        "src": "779:29:2"
+                      }
+                    ],
+                    "id": 156,
+                    "name": "ExpressionStatement",
+                    "src": "779:29:2"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_stringliteral_477e4d2909691e539d246d1cd23f7f8fdc65a7dec9511d552dbc90206eafaefe",
+                                  "typeString": "literal_string \"Your package has arrived\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 127,
+                              "type": "function (string memory)",
+                              "value": "LogNewAlert"
+                            },
+                            "id": 157,
+                            "name": "Identifier",
+                            "src": "824:11:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "596f7572207061636b616765206861732061727269766564",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"Your package has arrived\"",
+                              "value": "Your package has arrived"
+                            },
+                            "id": 158,
+                            "name": "Literal",
+                            "src": "836:26:2"
+                          }
+                        ],
+                        "id": 159,
+                        "name": "FunctionCall",
+                        "src": "824:39:2"
+                      }
+                    ],
+                    "id": 160,
+                    "name": "EmitStatement",
+                    "src": "819:44:2"
+                  }
+                ],
+                "id": 161,
+                "name": "Block",
+                "src": "768:103:2"
+              }
+            ],
+            "id": 162,
+            "name": "FunctionDefinition",
+            "src": "740:131:2"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getStatus",
+              "overrides": null,
+              "scope": 206,
+              "stateMutability": "pure",
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_status",
+                      "overrides": null,
+                      "scope": 191,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "enum ShippingStatus.ShipStatus",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "ShipStatus",
+                          "referencedDeclaration": 121,
+                          "type": "enum ShippingStatus.ShipStatus"
+                        },
+                        "id": 163,
+                        "name": "UserDefinedTypeName",
+                        "src": "949:10:2"
+                      }
+                    ],
+                    "id": 164,
+                    "name": "VariableDeclaration",
+                    "src": "949:18:2"
+                  }
+                ],
+                "id": 165,
+                "name": "ParameterList",
+                "src": "948:20:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 191,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 166,
+                        "name": "ElementaryTypeName",
+                        "src": "992:6:2"
+                      }
+                    ],
+                    "id": 167,
+                    "name": "VariableDeclaration",
+                    "src": "992:13:2"
+                  }
+                ],
+                "id": 168,
+                "name": "ParameterList",
+                "src": "991:15:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "falseBody": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_enum$_ShipStatus_$121",
+                            "typeString": "enum ShippingStatus.ShipStatus"
+                          },
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "==",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "member_name": "Pending",
+                              "referencedDeclaration": null,
+                              "type": "enum ShippingStatus.ShipStatus"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 121,
+                                  "type": "type(enum ShippingStatus.ShipStatus)",
+                                  "value": "ShipStatus"
+                                },
+                                "id": 169,
+                                "name": "Identifier",
+                                "src": "1081:10:2"
+                              }
+                            ],
+                            "id": 170,
+                            "name": "MemberAccess",
+                            "src": "1081:18:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 164,
+                              "type": "enum ShippingStatus.ShipStatus",
+                              "value": "_status"
+                            },
+                            "id": 171,
+                            "name": "Identifier",
+                            "src": "1103:7:2"
+                          }
+                        ],
+                        "id": 172,
+                        "name": "BinaryOperation",
+                        "src": "1081:29:2"
+                      },
+                      {
+                        "attributes": {
+                          "functionReturnParameters": 168
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "50656e64696e67",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"Pending\"",
+                              "value": "Pending"
+                            },
+                            "id": 173,
+                            "name": "Literal",
+                            "src": "1119:9:2"
+                          }
+                        ],
+                        "id": 174,
+                        "name": "Return",
+                        "src": "1112:16:2"
+                      }
+                    ],
+                    "id": 175,
+                    "name": "IfStatement",
+                    "src": "1077:51:2"
+                  },
+                  {
+                    "attributes": {
+                      "falseBody": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_enum$_ShipStatus_$121",
+                            "typeString": "enum ShippingStatus.ShipStatus"
+                          },
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "==",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "member_name": "Shipped",
+                              "referencedDeclaration": null,
+                              "type": "enum ShippingStatus.ShipStatus"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 121,
+                                  "type": "type(enum ShippingStatus.ShipStatus)",
+                                  "value": "ShipStatus"
+                                },
+                                "id": 176,
+                                "name": "Identifier",
+                                "src": "1140:10:2"
+                              }
+                            ],
+                            "id": 177,
+                            "name": "MemberAccess",
+                            "src": "1140:18:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 164,
+                              "type": "enum ShippingStatus.ShipStatus",
+                              "value": "_status"
+                            },
+                            "id": 178,
+                            "name": "Identifier",
+                            "src": "1162:7:2"
+                          }
+                        ],
+                        "id": 179,
+                        "name": "BinaryOperation",
+                        "src": "1140:29:2"
+                      },
+                      {
+                        "attributes": {
+                          "functionReturnParameters": 168
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "53686970706564",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"Shipped\"",
+                              "value": "Shipped"
+                            },
+                            "id": 180,
+                            "name": "Literal",
+                            "src": "1178:9:2"
+                          }
+                        ],
+                        "id": 181,
+                        "name": "Return",
+                        "src": "1171:16:2"
+                      }
+                    ],
+                    "id": 182,
+                    "name": "IfStatement",
+                    "src": "1136:51:2"
+                  },
+                  {
+                    "attributes": {
+                      "falseBody": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_enum$_ShipStatus_$121",
+                            "typeString": "enum ShippingStatus.ShipStatus"
+                          },
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "==",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "member_name": "Delivered",
+                              "referencedDeclaration": null,
+                              "type": "enum ShippingStatus.ShipStatus"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 121,
+                                  "type": "type(enum ShippingStatus.ShipStatus)",
+                                  "value": "ShipStatus"
+                                },
+                                "id": 183,
+                                "name": "Identifier",
+                                "src": "1199:10:2"
+                              }
+                            ],
+                            "id": 184,
+                            "name": "MemberAccess",
+                            "src": "1199:20:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 164,
+                              "type": "enum ShippingStatus.ShipStatus",
+                              "value": "_status"
+                            },
+                            "id": 185,
+                            "name": "Identifier",
+                            "src": "1223:7:2"
+                          }
+                        ],
+                        "id": 186,
+                        "name": "BinaryOperation",
+                        "src": "1199:31:2"
+                      },
+                      {
+                        "attributes": {
+                          "functionReturnParameters": 168
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "44656c697665726564",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"Delivered\"",
+                              "value": "Delivered"
+                            },
+                            "id": 187,
+                            "name": "Literal",
+                            "src": "1239:11:2"
+                          }
+                        ],
+                        "id": 188,
+                        "name": "Return",
+                        "src": "1232:18:2"
+                      }
+                    ],
+                    "id": 189,
+                    "name": "IfStatement",
+                    "src": "1195:55:2"
+                  }
+                ],
+                "id": 190,
+                "name": "Block",
+                "src": "1007:251:2"
+              }
+            ],
+            "id": 191,
+            "name": "FunctionDefinition",
+            "src": "930:328:2"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "functionSelector": "45f09ce9",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "Status",
+              "overrides": null,
+              "scope": 206,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 192,
+                "name": "ParameterList",
+                "src": "1320:2:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 205,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 193,
+                        "name": "ElementaryTypeName",
+                        "src": "1344:6:2"
+                      }
+                    ],
+                    "id": 194,
+                    "name": "VariableDeclaration",
+                    "src": "1344:13:2"
+                  }
+                ],
+                "id": 195,
+                "name": "ParameterList",
+                "src": "1343:15:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        197
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "mutability": "mutable",
+                          "name": "_status",
+                          "overrides": null,
+                          "scope": 204,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "enum ShippingStatus.ShipStatus",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "ShipStatus",
+                              "referencedDeclaration": 121,
+                              "type": "enum ShippingStatus.ShipStatus"
+                            },
+                            "id": 196,
+                            "name": "UserDefinedTypeName",
+                            "src": "1371:10:2"
+                          }
+                        ],
+                        "id": 197,
+                        "name": "VariableDeclaration",
+                        "src": "1371:18:2"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 123,
+                          "type": "enum ShippingStatus.ShipStatus",
+                          "value": "status"
+                        },
+                        "id": 198,
+                        "name": "Identifier",
+                        "src": "1392:6:2"
+                      }
+                    ],
+                    "id": 199,
+                    "name": "VariableDeclarationStatement",
+                    "src": "1371:27:2"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 195
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "string memory",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_enum$_ShipStatus_$121",
+                                  "typeString": "enum ShippingStatus.ShipStatus"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 191,
+                              "type": "function (enum ShippingStatus.ShipStatus) pure returns (string memory)",
+                              "value": "getStatus"
+                            },
+                            "id": 200,
+                            "name": "Identifier",
+                            "src": "1417:9:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 197,
+                              "type": "enum ShippingStatus.ShipStatus",
+                              "value": "_status"
+                            },
+                            "id": 201,
+                            "name": "Identifier",
+                            "src": "1427:7:2"
+                          }
+                        ],
+                        "id": 202,
+                        "name": "FunctionCall",
+                        "src": "1417:18:2"
+                      }
+                    ],
+                    "id": 203,
+                    "name": "Return",
+                    "src": "1410:25:2"
+                  }
+                ],
+                "id": 204,
+                "name": "Block",
+                "src": "1359:84:2"
+              }
+            ],
+            "id": 205,
+            "name": "FunctionDefinition",
+            "src": "1305:138:2"
+          }
+        ],
+        "id": 206,
+        "name": "ContractDefinition",
+        "src": "37:1411:2"
+      }
+    ],
+    "id": 207,
+    "name": "SourceUnit",
+    "src": "0:1448:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.7.0+commit.9e61f92b.Emscripten.clang"
+  },
+  "networks": {
+    "1608843130063": {
+      "events": {
+        "0xca75c80642b93c980135b8355995abae3ab06033dc81f956b3824323b4903ef5": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "description",
+              "type": "string"
+            }
+          ],
+          "name": "LogNewAlert",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x6728Bea4EDEFD33Ca980DA5cBAc0Dd3DDb773Dcd",
+      "transactionHash": "0x114459535ec98f0b26088a07ee097ce35f994869e0c9123d3e0a5aa53ac81034"
+    }
+  },
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2020-12-24T21:39:28.878Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
